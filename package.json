@@ -1,0 +1,56 @@
+{
+  "name": "sukako",
+  "version": "1.0.0",
+  "description": "スカちゃんｗ サーバー の かしこい ? おてつだいさん だ !",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukachanw/sukako.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sukachanw/sukako/issues"
+  },
+  "homepage": "https://github.com/sukachanw/sukako#readme",
+  "engines": {
+    "node": "18.16.0"
+  },
+  "dependencies": {
+    "@sapphire/decorators": "^6.0.1",
+    "@sapphire/discord.js-utilities": "6.0.7",
+    "@sapphire/framework": "^4.4.3",
+    "@sapphire/plugin-logger": "^3.0.3",
+    "@sapphire/utilities": "^3.11.1",
+    "@skyra/env-utilities": "^1.2.0",
+    "colorette": "^2.0.20",
+    "discord.js": "^14.10.2"
+  },
+  "devDependencies": {
+    "@sapphire/cli": "^1.6.1",
+    "@sapphire/ts-config": "^4.0.0",
+    "@types/node": "^18.16.3",
+    "@types/ws": "^8.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "prepare": "npx husky install",
+    "sapphire": "sapphire",
+    "generate": "sapphire generate",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "watch:start": "tsc-watch --onSuccess \"npm run start\""
+  },
+  "lint-staged": {
+    "{src,test}/**/*.{json,md,ts,yaml,yml}": "eslint --fix"
+  }
+}
